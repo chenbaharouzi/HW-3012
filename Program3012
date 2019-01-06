@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HW_2512
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             //Q1();
+
+            // Q2();
+
+            // Q3();
+
+            //Q4();
+
+           //Q5();
+
+
+                                                                                                                                                                                                                                                                        
+
+
+
+        }
+
+        private static void Q5()
+        {
+            Console.WriteLine("please enter an amount to withdraw:");
+            int amount = Convert.ToInt32(Console.ReadLine());
+
+            int bills200 = amount / 200;
+            Console.WriteLine($"{bills200} X 200 bill");
+
+            amount = amount % 200;
+            int bills100 = amount / 100;
+            Console.WriteLine($"{bills100} X 100 bill");
+
+            amount = amount % 100;
+            int bills20 = amount / 20;
+            Console.WriteLine($"{bills20} X 20 bill");
+
+            amount = amount % 20;
+            int coins5 = amount / 5;
+            Console.WriteLine($"{coins5} X 5 coin");
+        }
+
+        private static void Q4()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                int j = 2;
+                while (i % j != 0 && j <= i)
+                {
+                    j++;
+                }
+                {
+                    if (i == j)
+                    {
+                        Console.WriteLine(i);
+
+                    }
+
+                }
+
+            }
+        }
+
+        private static void Q3()
+        {
+            Console.WriteLine("please enter a number:");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            if (a > 9 && a < 100)
+            {
+                Console.WriteLine("AHADOT:" + (a % 10));
+                Console.WriteLine("ASAROT:" + (a / 10));
+
+                if ((a % 10) > (a / 10))
+                {
+                    Console.WriteLine("AHADOT is bigger");
+                }
+                else if ((a % 10) < (a / 10))
+                {
+                    Console.WriteLine("ASAROT is bigger");
+                }
+                else
+                {
+                    Console.WriteLine("ASAROT equel to AHADOT");
+                }
+            }
+            else
+            {
+                Console.WriteLine("NOT 2 digits number");
+            }
+        }
+
+        private static void Q2()
+        {
+            for (int i = 100; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private static void Q1()
+        {
+            //Question 1
+            for (int i = 10; i <= 100; i = i + 10)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
